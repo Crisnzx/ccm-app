@@ -1,22 +1,55 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { View, Image, StyleSheet, Text, Button } from 'react-native';
+import Input from './components/Input';
+import Icone from './components/Icone';
 
-export default function App() {
+export default function App(){
+
   return (
-    <View style={styles.container}>
-      <Text>depois do almoço: 1 - criar um repositório no github, 2 - emular o android no Android Studio</Text>
-      <Image style={{width:200, height:200}} source={{uri: 'https://github.com/Crisnzx.png'}}/>
-      <StatusBar style="auto" />
+
+    <View style={styles.main}>
+      <View style={styles.cabecalho}>
+        <Image 
+        style={{width:24, height:22}}
+        source={require('./assets/menu.png')}
+        />
+      </View>
+      <View  style={styles.corpo}>
+        <Icone/>
+        <Input titulo='Email'/>
+        <Input titulo='Senha'/>
+          <View style={{borderWidth:1, borderRadius:5}}>
+            <Button title='  Alterar senha  ' color='gray'/>
+          </View>
+      </View>
     </View>
+
   );
+
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'lightgray',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+  main:{
+
+    flex:1
+
   },
+
+  cabecalho: {
+    flex:0.03,
+    backgroundColor:'#19747A',
+    justifyContent:'center',
+    padding:15
+
+  },
+  corpo:{
+    
+    flex:0.65,
+    alignItems: 'center',
+    justifyContent:'space-between',
+    marginVertical: 30
+    
+
+  }
 });
