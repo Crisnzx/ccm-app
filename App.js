@@ -5,7 +5,8 @@ import TelaLogin from './components/TelaLogin/TelaLogin';
 import TelaCadastro from './components/TelaCadastro/TelaCadastro';
 import TelaMinhaConta from './components/TelaMinhaConta/TelaMinhaConta';
 import TelaPrivacidade from './components/TelaPrivacidade/TelaPrivacidade';
-import TelaCompeticoes from './components/TelaCompeticoes/TelaCompeticoes';
+import TelaCompeticoes from './components/TelaCompeticoes/TelaCompeticoes'
+import TelaQuestoes from './components/TelaQuestoes/TelaQuestoes';
 
 
 
@@ -14,7 +15,7 @@ export default function App(){
 
   return (
     
-      <TelaLogin/>
+      <TelaQuestoes/>
     
   );
 }
