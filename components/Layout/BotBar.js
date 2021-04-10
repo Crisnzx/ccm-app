@@ -1,15 +1,17 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 export default function BotBar() {
 
-    return(
+    return (
 
         <View style={styles.barra}>
-            <Image 
-            style={{width:30, height:30}}
-            source={require('../../assets/voltar.png')} 
-            />
+            <TouchableOpacity>
+                <Image
+                    style={{ width: 30, height: 30, marginLeft: 15 }}
+                    source={require('../../assets/voltar.png')}
+                />
+            </TouchableOpacity>
         </View>
 
     );
@@ -18,11 +20,11 @@ export default function BotBar() {
 
 const styles = StyleSheet.create({
 
-    barra:{
+    barra: {
 
-        height:56,
-        padding:15,
-        backgroundColor:'#19747A'
+        height: 56,
+        justifyContent: 'center',
+        backgroundColor: '#19747A'
     }
 
 });

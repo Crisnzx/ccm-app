@@ -11,16 +11,18 @@ export default function TelaCompeticoes() {
     return (
         <SafeAreaProvider>
             <SafeAreaView style={styles.main}>
-            <TopBar filter={true} />
-                <ScrollView> 
+                <TopBar filter={true} />
+                <ScrollView>
                     <View style={{ alignItems: 'center' }}>
-                        <View style={{height:20}}></View>
-                        <BotaoComp title='OCI' description='Olimpíada CODEsp de Informática' />
-                        <BotaoComp title='OPI' description='Olimpíada Paraibana de Informática' />
-                        <BotaoComp title='ORI' description='Olimpíada Regional de Informática' />
-                        <BotaoComp title='OBI' description='Olimpíada Brasileira de Informática' />
-                        <BotaoComp title='ONI' description='Olimpíada Nordestina de Informática' />
-                        <BotaoComp title='OEI' description='Olimpíada Esperancense de Informática' />
+                        <View style={{width:'85%'}}>
+                            <View style={{ height: 20 }}></View>
+                            <BotaoComp title='OCI' description='Olimpíada CODEsp de Informática' />
+                            <BotaoComp title='OPI' description='Olimpíada Paraibana de Informática' />
+                            <BotaoComp title='ORI' description='Olimpíada Regional de Informática' />
+                            <BotaoComp title='OBI' description='Olimpíada Brasileira de Informática' />
+                            <BotaoComp title='ONI' description='Olimpíada Nordestina de Informática' />
+                            <BotaoComp title='OEI' description='Olimpíada Esperancense de Informática' />
+                        </View>
                     </View>
                 </ScrollView>
             </SafeAreaView>

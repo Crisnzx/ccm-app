@@ -3,6 +3,9 @@ import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function TopBar(props) {
 
+
+
+
   if (props.filter) {
 
     return (
@@ -14,7 +17,7 @@ export default function TopBar(props) {
             source={require('../../assets/menu.png')}
           />
         </TouchableOpacity>
-        
+
         <TouchableOpacity>
           <Image
             style={{ width: 30, height: 30 }}
@@ -37,6 +40,8 @@ export default function TopBar(props) {
   }
 
 }
+
+
 
 const styles = StyleSheet.create({
 
@@ -61,3 +66,5 @@ const styles = StyleSheet.create({
   }
 
 });
+
+
