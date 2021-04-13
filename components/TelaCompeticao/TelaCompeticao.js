@@ -6,7 +6,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Tupla from './Tupla';
 import BotBar from '../Layout/BotBar';
 
-export default function TelaCompeticao() {
+export default function TelaCompeticao(props) {
 
     return (
 
@@ -30,11 +30,17 @@ export default function TelaCompeticao() {
                             <Text style={{ fontSize: 16 }}>Níveis:</Text>
                         </View>
                         <Text />
-                        <Button title='Júnior' color='black' />
+                        <Button title='Júnior' color='black'
+                            onPress={() => props.navigation.navigate('Questoes')}
+                        />
                         <Text />
-                        <Button title='Avançado' color='black' />
+                        <Button title='Avançado' color='black'
+                            onPress={() => props.navigation.navigate('Questoes')}
+                        />
                         <Text />
-                        <Button title='Sênior' color='black' />
+                        <Button title='Sênior' color='black'
+                            onPress={() => props.navigation.navigate('Questoes')}
+                        />
                     </View>
 
                 </View>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function BotaoComp(props) {
@@ -8,7 +8,10 @@ export default function BotaoComp(props) {
     return (
 
         <View>
-            <TouchableOpacity>
+            <TouchableOpacity
+                activeOpacity={0.7}
+                onPress={()=> props.navigation.navigate('Competicao') }
+            >
                 <LinearGradient
                     colors={['#0C0C0C', '#323232', '#0C0C0C']}
                     locations={[0, 0.5, 1]}
@@ -25,6 +28,7 @@ export default function BotaoComp(props) {
 
 }
 
+
 const styles = StyleSheet.create({
 
     buttonComp: {
@@ -32,9 +36,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#eaeaea',
         height: 125,
         width: '100%',
-        borderWidth: 2,
+        borderWidth: 1,
         borderColor: 'gray',
-        borderRadius: 5,
+        borderRadius: 10,
         padding: 10,
         alignItems: 'center',
         justifyContent: 'space-evenly'
@@ -53,7 +57,8 @@ const styles = StyleSheet.create({
     description: {
 
         color: 'white',
-        fontSize: 16
+        fontSize: 16,
+        textAlign:'center'
     },
 
     separator: {

@@ -18,8 +18,8 @@ export default function TelaQuestao() {
                 <ScrollView>
                     <View style={styles.conteudo}>
                         <Questao
-                            title='Baldes'
-                            nomeArq='baldes.js'
+                            title='Plantação'
+                            nomeArq='plantacao.js'
                             texto={textoQuestao} />
                         <CasoTeste
                             entrada={'6\n9'}

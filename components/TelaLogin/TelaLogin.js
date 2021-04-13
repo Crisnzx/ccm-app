@@ -4,7 +4,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import Input from '../Layout/Input';
 
-export default function TelaLogin() {
+export default function TelaLogin(props) {
     return (
 
         <SafeAreaProvider>
@@ -21,10 +21,15 @@ export default function TelaLogin() {
                     </View>
                     <View style={styles.layoutBotao}>
                         <View style={styles.botao}>
-                            <Button title='Cadastrar' color="#24C7B1" />
+                            <Button 
+                            title='Cadastrar' 
+                            color="#24C7B1" 
+                            onPress={() => props.navigation.navigate('Cadastro')}/>
                         </View>
                         <View style={styles.botao}>
-                            <Button title='Login' color="#24C7B1" />
+                            <Button title='Login' 
+                            color="#24C7B1" 
+                            onPress={() => props.navigation.navigate('Competicoes')}/>
                         </View>
                     </View>
                 </View>

@@ -5,7 +5,8 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 import BotBar from '../Layout/BotBar';
 import BotaoQuest from './BotaoQuest';
-export default function TelaQuestoes() {
+
+export default function TelaQuestoes(props) {
 
     return (
 
@@ -18,11 +19,11 @@ export default function TelaQuestoes() {
                     <View style={{ alignItems: 'center' }}>
                         <View style={{width:'80%'}}>
                             <View style={{ height: 30 }} />
-                            <BotaoQuest title='1- Ração' />
-                            <BotaoQuest title='2- Baldes' />
-                            <BotaoQuest title='3- Plantação' />
-                            <BotaoQuest title='4- Alienígena' />
-                            <BotaoQuest title='5- Projeto GENOMA' />
+                            <BotaoQuest navigation={props.navigation} title='1- Ração' />
+                            <BotaoQuest navigation={props.navigation} title='2- Baldes' />
+                            <BotaoQuest navigation={props.navigation} title='3- Plantação' />
+                            <BotaoQuest navigation={props.navigation} title='4- Alienígena' />
+                            <BotaoQuest navigation={props.navigation} title='5- Projeto GENOMA' />
                         </View>
                     </View>
                 </ScrollView>

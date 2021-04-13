@@ -6,7 +6,7 @@ import TopBar from '../Layout/TopBar';
 import BotaoComp from './BotaoComp';
 
 
-export default function TelaCompeticoes() {
+export default function TelaCompeticoes(props) {
 
     return (
         <SafeAreaProvider>
@@ -16,12 +16,12 @@ export default function TelaCompeticoes() {
                     <View style={{ alignItems: 'center' }}>
                         <View style={{width:'85%'}}>
                             <View style={{ height: 20 }}></View>
-                            <BotaoComp title='OCI' description='Olimpíada CODEsp de Informática' />
-                            <BotaoComp title='OPI' description='Olimpíada Paraibana de Informática' />
-                            <BotaoComp title='ORI' description='Olimpíada Regional de Informática' />
-                            <BotaoComp title='OBI' description='Olimpíada Brasileira de Informática' />
-                            <BotaoComp title='ONI' description='Olimpíada Nordestina de Informática' />
-                            <BotaoComp title='OEI' description='Olimpíada Esperancense de Informática' />
+                            <BotaoComp navigation={props.navigation} title='OCI' description='Olimpíada CODEsp de Informática' />
+                            <BotaoComp navigation={props.navigation} title='OPI' description='Olimpíada Paraibana de Informática' />
+                            <BotaoComp navigation={props.navigation} title='ORI' description='Olimpíada Regional de Informática' />
+                            <BotaoComp navigation={props.navigation} title='OBI' description='Olimpíada Brasileira de Informática' />
+                            <BotaoComp navigation={props.navigation} title='ONI' description='Olimpíada Nordestina de Informática' />
+                            <BotaoComp navigation={props.navigation} title='OEI' description='Olimpíada Esperancense de Informática' />
                         </View>
                     </View>
                 </ScrollView>

@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Input from '../Layout/Input';
 
 
-export default function App() {
+export default function TelaCadastro(props) {
     return (
 
         <SafeAreaProvider>
@@ -26,7 +26,8 @@ export default function App() {
                         </View>
 
                         <View style={styles.botao}>
-                            <Button title='Cadastrar' color="#24C7B1" />
+                            <Button title='Cadastrar' color="#24C7B1" 
+                            onPress={() => props.navigation.navigate('Login')} />
                         </View>
 
 

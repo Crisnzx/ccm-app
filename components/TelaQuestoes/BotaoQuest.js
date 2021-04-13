@@ -6,7 +6,9 @@ export default function BotaoQuest(props) {
 
     return (
         <View>
-            <TouchableOpacity>
+            <TouchableOpacity  activeOpacity={0.6}
+            onPress={() => props.navigation.navigate('Questao')}
+            >
                 <LinearGradient 
                 colors={['#BABABA','#E5E5E5','#E5E5E5','#BABABA']}
                 locations={[0,0.2,0.8,1]}
